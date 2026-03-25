@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package embedding;
+
+// Go用のパッケージパス指定
+option go_package = "./pb";
+
+service EmbeddingService {
+  // 単一または複数のテキストをベクトルに変換する
+  rpc GetEmbeddings (EmbeddingRequest) returns (EmbeddingResponse);
+}
+
+message EmbeddingRequest {
+  // 処理したいテキストのリスト
+  repeated string texts = 1;
+}
+
+message EmbeddingResponse {
+  // 埋め込みベクトルのリスト
+  // 1つのテキストに対して1つのVectorオブジェクトを返す
+  repeated Vector vectors = 1;
+}
+
+message Vector {
+  // 浮動小数点の配列（embedding本体）
+  repeated float values = 1;
+}

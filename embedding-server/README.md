@@ -1,0 +1,1 @@
+使用モデル : [ruri v3 310m](https://huggingface.co/cl-nagoya/ruri-v3-310m) [[LICENSE]](https://huggingface.co/cl-nagoya/ruri-v3-310m/blob/main/README.md)
